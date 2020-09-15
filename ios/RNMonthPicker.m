@@ -31,7 +31,7 @@ NSInteger selectedYearRow;
 {
     if ((self = [super initWithFrame:frame])) {
         self.delegate = self;
-        gregorian = [NSCalendar currentCalendar];
+        gregorian = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
         _value = nil;
         _minimumDate = nil;
         _maximumDate = nil;
